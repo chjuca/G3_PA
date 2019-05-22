@@ -13,6 +13,7 @@ import java.util.Date;
  * @author Carlos Juca
  */
 public class LogAsistencia {
+    
     public Asistencia crearAsistencia(Date fecha){
         Asistencia ObjAsistencia = new Asistencia(fecha);
         return ObjAsistencia;

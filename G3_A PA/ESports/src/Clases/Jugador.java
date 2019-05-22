@@ -1,6 +1,5 @@
 package Clases;
 
-import Clases.Miembro;
 import java.util.*;
 
 /**
@@ -12,6 +11,7 @@ public class Jugador extends Miembro {
     public int nivelClasificatoria;
     public String posicion;
     public int funcion;
+    public ArrayList<Asistencia> asistencias = new ArrayList<>();
 
     public Jugador() {
     }
@@ -22,6 +22,9 @@ public class Jugador extends Miembro {
         this.nivelClasificatoria = nivelClasificatoria;
         this.posicion = posicion;
         this.funcion = funcion;
+    }
+    public void AgregarAsistencia (Asistencia ObjAsistencia){    
+        this.asistencias.add(ObjAsistencia);
     }
 
     public String getNickname() {

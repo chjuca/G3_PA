@@ -9,6 +9,7 @@ import Clases.Asistencia;
 import Clases.Jugador;
 import Data.ImportJugador;
 import Logica.LogAsistencia;
+import Logica.LogJugador;
 import Logica.LogLogin;
 import java.util.Date;
 
@@ -19,7 +20,8 @@ import java.util.Date;
 public class RegistrarAsistencia extends javax.swing.JFrame {
 
     Asistencia ObjAsistencia = new Asistencia();
-    LogAsistencia ObjLogAsistencia = new LogAsistencia();
+    LogJugador ObjLogJugador = new LogJugador();
+    Jugador ObjJugador;
 
     /**
      * Creates new form RegistrarAistencia
@@ -247,30 +249,16 @@ public class RegistrarAsistencia extends javax.swing.JFrame {
 
         ImportJugador ObjImportJugador = new ImportJugador();
         String user = this.jTextCedula.getText();
-        Jugador ObjJugador;
         try {
             ObjJugador = ObjImportJugador.Import_Jugador(user);
             this.jTextFieldNombres.setText(ObjJugador.getNombres());
             this.jTextFieldApellidos.setText(ObjJugador.getApellidos());
             this.jTextFieldNick.setText(ObjJugador.getNickname());
+            this.jTextFieldNivel.setText(ObjJugador.getNivelClasificatoria()+"");
             this.jTextFieldPosicion.setText(ObjJugador.getPosicion());
         } catch (NullPointerException e) {
             
-        }
-
-//  
-//        
-//        
-//        
-//        
-//        
-//        
-//        PONER PARA Q GET DATOS
-//                
-//                
-//                
-//                
-//                
+        }     
     }//GEN-LAST:event_jButtonValidarActionPerformed
 
     private void jButtonValidarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonValidarKeyReleased
@@ -287,7 +275,7 @@ public class RegistrarAsistencia extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Date fecha = new Date();
-        ObjAsistencia = ObjLogAsistencia.crearAsistencia(fecha);
+        ObjLogJugador.AgregarAsistencia(fecha, ObjJugador);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
