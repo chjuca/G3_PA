@@ -5,6 +5,7 @@
  */
 package interfaz;
 
+import Clases.Miembro;
 import Logica.LogLogin;
 import java.util.Arrays;
 
@@ -132,12 +133,15 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarActionPerformed
+        
+        Miembro ObjMiembro = new Miembro();
+        
         String user = jTextFieldUser.getText();
         char clave[] = jPasswordField1.getPassword();
         String pass = new String(clave);
 
         LogLogin ObjLogLogin = new LogLogin();
-        ObjLogLogin.IngresarJugador(user, pass, null, this);
+        ObjLogLogin.IngresarJugador(user, pass,ObjMiembro,this);
     }//GEN-LAST:event_jButtonIngresarActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

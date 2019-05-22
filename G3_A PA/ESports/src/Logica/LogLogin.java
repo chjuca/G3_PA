@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class LogLogin {
 
     public void IngresarJugador(String user, String pass, Miembro ObjMiembro, Login login) {
-        if (user.equals("a") && pass.equals("1")) {
+        if (user.equals(ObjMiembro.getCedula()) && pass.equals(ObjMiembro.getContraseña())) {
             login.dispose();
             JOptionPane.showMessageDialog(null, "Bienvenido\n"
                     + "Acceso Correcto", "",
