@@ -361,7 +361,7 @@ public class RegistroJugador extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String nickname = this.jTextFieldNick.getText();
-        int nivelClasificatoria = Integer.parseInt(this.jTextFieldNivel.getText());
+        String nivelClasificatoria = this.jTextFieldNivel.getText();
         String posicion = this.jTextFieldPosicion.getText();
         String cedula = this.jTextFieldCedula.getText();
         String nombres = this.jTextFieldNombres.getText();

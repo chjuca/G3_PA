@@ -9,14 +9,14 @@ import java.util.*;
 public class Jugador extends Miembro {
 
     public String nickname;
-    public int nivelClasificatoria;
+    public String nivelClasificatoria;
     public String posicion;
     public int funcion;
 
     public Jugador() {
     }
 
-    public Jugador(String nickname, int nivelClasificatoria, String posicion, int funcion, String cedula, String nombres, String apellidos, String contraseña) {
+    public Jugador(String nickname, String nivelClasificatoria, String posicion, int funcion, String cedula, String nombres, String apellidos, String contraseña) {
         super(cedula, nombres, apellidos, contraseña);
         this.nickname = nickname;
         this.nivelClasificatoria = nivelClasificatoria;
@@ -32,11 +32,11 @@ public class Jugador extends Miembro {
         this.nickname = nickname;
     }
 
-    public int getNivelClasificatoria() {
+    public String getNivelClasificatoria() {
         return nivelClasificatoria;
     }
 
-    public void setNivelClasificatoria(int nivelClasificatoria) {
+    public void setNivelClasificatoria(String nivelClasificatoria) {
         this.nivelClasificatoria = nivelClasificatoria;
     }
 

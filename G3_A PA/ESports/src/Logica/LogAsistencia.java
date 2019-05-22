@@ -5,7 +5,7 @@
  */
 package Logica;
 
-import Clases.Asistencia;
+import Clases.Registro;
 import java.util.Date;
 
 /**
@@ -13,8 +13,8 @@ import java.util.Date;
  * @author Carlos Juca
  */
 public class LogAsistencia {
-    public Asistencia crearAsistencia(Date fecha){
-        Asistencia ObjAsistencia = new Asistencia(fecha);
+    public Registro crearAsistencia(Date fecha){
+        Registro ObjAsistencia = new Registro(fecha);
         return ObjAsistencia;
     }
 }

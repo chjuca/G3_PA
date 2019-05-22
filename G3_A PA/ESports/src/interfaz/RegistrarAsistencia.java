@@ -5,7 +5,7 @@
  */
 package interfaz;
 
-import Clases.Asistencia;
+import Clases.Registro;
 import Clases.Jugador;
 import Data.ImportJugador;
 import Logica.LogAsistencia;
@@ -18,7 +18,7 @@ import java.util.Date;
  */
 public class RegistrarAsistencia extends javax.swing.JFrame {
 
-    Asistencia ObjAsistencia = new Asistencia();
+    Registro ObjAsistencia = new Registro();
     LogAsistencia ObjLogAsistencia = new LogAsistencia();
 
     /**

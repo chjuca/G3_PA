@@ -5,14 +5,14 @@ import java.util.*;
 /**
  *
  */
-public class Asistencia {
+public class Registro {
 
     public Date fecha;
 
-    public Asistencia() {
+    public Registro() {
     }
 
-    public Asistencia(Date fecha) {
+    public Registro(Date fecha) {
         this.fecha = fecha;
     }
 
