@@ -7,7 +7,9 @@ package interfaz;
 
 import Clases.Asistencia;
 import Clases.Jugador;
+import Data.ImportJugador;
 import Logica.LogAsistencia;
+import Logica.LogLogin;
 import java.util.Date;
 
 /**
@@ -15,9 +17,10 @@ import java.util.Date;
  * @author Carlos Juca
  */
 public class RegistrarAsistencia extends javax.swing.JFrame {
-    
-    Asistencia ObjAsistencia= new Asistencia();
+
+    Asistencia ObjAsistencia = new Asistencia();
     LogAsistencia ObjLogAsistencia = new LogAsistencia();
+
     /**
      * Creates new form RegistrarAistencia
      */
@@ -241,7 +244,21 @@ public class RegistrarAsistencia extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextCedulaKeyReleased
 
     private void jButtonValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidarActionPerformed
-//        
+
+        ImportJugador ObjImportJugador = new ImportJugador();
+        String user = this.jTextCedula.getText();
+        Jugador ObjJugador;
+        try {
+            ObjJugador = ObjImportJugador.Import_Jugador(user);
+            this.jTextFieldNombres.setText(ObjJugador.getNombres());
+            this.jTextFieldApellidos.setText(ObjJugador.getApellidos());
+            this.jTextFieldNick.setText(ObjJugador.getNickname());
+            this.jTextFieldPosicion.setText(ObjJugador.getPosicion());
+        } catch (NullPointerException e) {
+            
+        }
+
+//  
 //        
 //        
 //        

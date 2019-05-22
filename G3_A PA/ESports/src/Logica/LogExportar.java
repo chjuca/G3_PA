@@ -6,7 +6,7 @@
 package Logica;
 
 import Clases.Jugador;
-import Data.Exportar;
+import Data.ExpJugador;
 
 /**
  *
@@ -14,7 +14,7 @@ import Data.Exportar;
  */
 public class LogExportar {
     public void CrearJugador(Jugador ObjJugador){
-        Exportar ObjExportar = new Exportar();
+        ExpJugador ObjExportar = new ExpJugador();
         ObjExportar.Crear(ObjJugador);
     }
 }

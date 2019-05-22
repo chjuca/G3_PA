@@ -13,7 +13,7 @@ import java.io.*;//no olviden importar esta librería al inicio de su programa
  *
  * @author Carlos Juca
  */
-public class Exportar{
+public class ExpJugador{
 
     //esto es solo un método, no una clase, el método deberá ser incluido en una clase java para su uso
     public void Crear(Jugador ObjJugador) {

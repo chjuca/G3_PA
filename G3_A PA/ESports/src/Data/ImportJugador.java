@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * @author Carlos Juca
  */
-public class Importar {
+public class ImportJugador {
 
     private Scanner entrada;
 
@@ -27,7 +27,6 @@ public class Importar {
 
         try {
             entrada = new Scanner(new File("data/Jugador.txt"));
-            entrada.nextLine();
             while (entrada.hasNext()) {
                 // se crea el objeto para leer Json
                 Gson g = new Gson();
@@ -54,5 +53,24 @@ public class Importar {
             System.exit(1);
         }
         return lista;
+    }
+    
+        public Jugador Import_Jugador(String user) {
+
+        ImportJugador ObjImportar = new ImportJugador();
+        ArrayList<Jugador> list_Jugador = LeerJson();
+
+        Jugador ObjJugador = new Jugador();
+        
+        for (Jugador ObjJugadorAux : list_Jugador) {
+            if (user.equals(ObjJugadorAux.getCedula())) {
+                ObjJugador = ObjJugadorAux;
+                return ObjJugador;
+            }
+        }
+        for (Jugador ObjJugadorAux : list_Jugador) {
+            System.out.println(ObjJugador.toString());
+        }
+        return ObjJugador;
     }
 }

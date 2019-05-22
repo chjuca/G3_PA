@@ -1,0 +1,2 @@
+{"nickname":"jucaco","nivelClasificatoria":12,"posicion":"TOP","funcion":1,"cedula":"1105137234","nombres":"Carlos ","apellidos":"Juca","contraseña":"gt7nvHmU"}
+{"nickname":"jucaco1","nivelClasificatoria":19,"posicion":"TOPES","funcion":1,"cedula":"1105137234","nombres":"Carlos ","apellidos":"Juca","contraseña":"gt7nvHmU"}
