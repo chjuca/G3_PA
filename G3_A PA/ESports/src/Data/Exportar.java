@@ -24,7 +24,7 @@ public class Exportar{
         FileWriter fichero = null;
         PrintWriter pw = null;
         try {
-            fichero = new FileWriter("data/jugador.txt",true);
+            fichero = new FileWriter("data/Jugador.txt",true);
             pw = new PrintWriter(fichero);
             pw.println(JSON);
         } catch (Exception e) {

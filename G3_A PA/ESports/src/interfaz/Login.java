@@ -141,7 +141,7 @@ public class Login extends javax.swing.JFrame {
         String pass = new String(clave);
 
         LogLogin ObjLogLogin = new LogLogin();
-        ObjLogLogin.IngresarJugador(user, pass,ObjMiembro,this);
+        ObjLogLogin.IngresarJugador(user, pass,this);
     }//GEN-LAST:event_jButtonIngresarActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

@@ -8,8 +8,6 @@ package interfaz;
 import Clases.Jugador;
 import Logica.LogExportar;
 import Logica.LogJugador;
-import java.awt.Color;
-import javax.swing.BorderFactory;
 
 /**
  *
